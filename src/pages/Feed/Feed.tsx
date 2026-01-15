@@ -1,5 +1,7 @@
 import PostCard from "../../components/PostCard/PostCard";
+import PostForm from "../../components/PostForm/PostForm";
 import { usePosts } from "../../hooks/usePosts";
+import type { Post } from "../../types";
 import styles from "./Feed.module.css";
 
 function Feed() {
@@ -28,8 +30,10 @@ function Feed() {
         <h1>피드</h1>
       </div>
 
+      <PostForm />
+
       <div className={styles.posts}>
-        {data?.posts.map((post) => (
+        {data?.posts.map((post: Post) => (
           <PostCard key={post.id} post={post} />
         ))}
       </div>
