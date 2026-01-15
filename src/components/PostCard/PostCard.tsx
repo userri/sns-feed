@@ -42,7 +42,7 @@ function PostCard({ post }: PostCardProps) {
       <div className={styles.footer}>
         <LikeButton postId={post.id} likes={post.likes} isLiked={isLiked} />
         {/* <button className={styles.actionBtn}>❤️ {post.likes}</button> */}
-        <button className={styles.actionBtn}>💬 {post.commentCount}</button>
+        {/* <button className={styles.actionBtn}>💬 {post.commentCount}</button> */}
       </div>
       <CommentSection postId={post.id} />
     </article>
