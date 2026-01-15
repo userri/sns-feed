@@ -61,3 +61,36 @@
 body.dark .header h1 {
     color: #e4e6eb;
 }
+
+.observer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.loadingMore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.loadingMore .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+}
+
+.loadMoreBtn {
+    padding: 12px 32px;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.loadMoreBtn:hover {
+    background: #166fe5;
+}
