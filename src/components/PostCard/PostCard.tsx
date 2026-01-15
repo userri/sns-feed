@@ -1,7 +1,6 @@
 import type { Post } from "../../types";
 import styles from "./PostCard.module.css";
 import LikeButton from "../LikeButton/LikeButton"; //팀C
-import { Post } from "../../types";
 
 interface PostCardProps {
   post: Post;
