@@ -41,3 +41,5 @@ function PostCard({ post }: PostCardProps) {
     </article>
   );
 }
+
+export default PostCard;
