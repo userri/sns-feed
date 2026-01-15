@@ -40,8 +40,7 @@ let posts: Post[] = [
  id: 3,
  author: users[0],
  content: '오늘 배운 것: useInfiniteQuery 👍',
- image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeayRz
-eLmGC5wmWdVPRLd_lsCEsdqIDH-1xQ&s',
+ image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeayRzeLmGC5wmWdVPRLd_lsCEsdqIDH-1xQ&s',
  likes: 23,
  likedBy: [],
  commentCount: 5,
