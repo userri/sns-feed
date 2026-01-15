@@ -1,4 +1,5 @@
 import styles from "./PostCard.module.css";
+import LikeButton from "../LikeButton/LikeButton"; //팀C
 import { Post } from "../../types";
 
 interface PostCardProps {
@@ -13,6 +14,9 @@ function PostCard({ post }: PostCardProps) {
     if (seconds > 86400) return `${Math.floor(seconds / 3600)}시간 전`;
     return `${Math.floor(seconds / 86400)}`;
   };
+
+  const currentUserId = 1; // db.currentUser.id 팀C
+  const isLiked = post.likedBy.includes(currentUserId); //팀C
 
   return (
     <article className={styles.card}>
@@ -35,9 +39,12 @@ function PostCard({ post }: PostCardProps) {
       )}
 
       <div className={styles.footer}>
-        <button className={styles.actionBtn}>❤️ {post.likes}</button>
+        <LikeButton postId={post.id} likes={post.likes} isLiked={isLiked} />
+        {/* <button className={styles.actionBtn}>❤️ {post.likes}</button> */}
         <button className={styles.actionBtn}>💬 {post.commentCount}</button>
       </div>
     </article>
   );
 }
+
+export default PostCard;
