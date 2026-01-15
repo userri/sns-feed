@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import type { Post } from '../../types';
 import LikeButton from '../LikeButton/LikeButton';
 import CommentSection from '../CommentSection/CommentSection';
 import styles from './PostCard.module.css';
+=======
+import type { Post } from "../../types";
+import styles from "./PostCard.module.css";
+import LikeButton from "../LikeButton/LikeButton"; //팀C
+import { Post } from "../../types";
+
+>>>>>>> main
 interface PostCardProps {
   post: Post;
 }
@@ -13,8 +21,15 @@ function PostCard({ post }: PostCardProps) {
     if (seconds < 86400) return `${Math.floor(seconds / 3600)}시간 전`;
     return `${Math.floor(seconds / 86400)}일 전`;
   };
+<<<<<<< HEAD
   const currentUserId = 1;
   const isLiked = post.likedBy.includes(currentUserId);
+=======
+
+  const currentUserId = 1; // db.currentUser.id 팀C
+  const isLiked = post.likedBy.includes(currentUserId); //팀C
+
+>>>>>>> main
   return (
     <article className={styles.card}>
       <div className={styles.header}>
@@ -33,14 +48,24 @@ function PostCard({ post }: PostCardProps) {
         <img src={post.image} alt="" className={styles.postImage} />
       )}
       <div className={styles.footer}>
+<<<<<<< HEAD
         <LikeButton
           postId={post.id}
           likes={post.likes}
           isLiked={isLiked}
         />
+=======
+        <LikeButton postId={post.id} likes={post.likes} isLiked={isLiked} />
+        {/* <button className={styles.actionBtn}>❤️ {post.likes}</button> */}
+        <button className={styles.actionBtn}>💬 {post.commentCount}</button>
+>>>>>>> main
       </div>
       <CommentSection postId={post.id} />
     </article>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 export default PostCard;
