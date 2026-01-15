@@ -3,7 +3,6 @@ import styles from "./PostCard.module.css";
 import LikeButton from "../LikeButton/LikeButton";
 import CommentSection from "./CommentSection/CommentSection";
 
-
 interface PostCardProps {
   post: Post;
 }
