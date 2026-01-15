@@ -1,7 +1,8 @@
 import type { Post } from "../../types";
 import styles from "./PostCard.module.css";
-import LikeButton from "../LikeButton/LikeButton"; //팀C
-import { Post } from "../../types";
+import LikeButton from "../LikeButton/LikeButton";
+import CommentSection from "./CommentSection/CommentSection";
+
 
 interface PostCardProps {
   post: Post;
@@ -44,6 +45,7 @@ function PostCard({ post }: PostCardProps) {
         {/* <button className={styles.actionBtn}>❤️ {post.likes}</button> */}
         <button className={styles.actionBtn}>💬 {post.commentCount}</button>
       </div>
+      <CommentSection postId={post.id} />
     </article>
   );
 }

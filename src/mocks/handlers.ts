@@ -85,6 +85,14 @@ export const handlers = [
 
     return HttpResponse.json(post);
   }),
+ // 댓글 불러오기
+  http.get("/api/posts/:id/comments", async ({ params }) => {
+    await delay(300);
+    const postComments = db.comments.filter(
+      (c) => c.postId === Number(params.id)
+    );
+    return HttpResponse.json(postComments);
+  }),
 
   // 댓글 작성
   http.post("/api/comments", async ({ request }) => {
